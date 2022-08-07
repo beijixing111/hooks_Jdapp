@@ -1,0 +1,58 @@
+.tabbar {
+  height: 50px;
+  position: fixed;
+  left: 0;
+  z-index: 99;
+  bottom: 0;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  :global {
+    .tabbar-content {
+      display: flex;
+      height: 100%;
+      max-width: 640px;
+      width: 100%;
+      border-top: 0.01rem solid #f2f2f2;
+      background: #fafafa;
+      box-shadow: 0 0 0.1rem 0.1rem rgba(0, 0, 0, 0.05);
+      margin: 0 auto;
+    }
+    .tabbar-item {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      text-decoration: none;
+      color: #333;
+      flex-direction: column;
+      position: relative;
+      &.active {
+        color: #f00 !important;
+      }
+      i {
+        position: absolute;
+        top: 0.06rem;
+        right: 50%;
+        font-size: 0.2rem;
+        color: #f00;
+        width: 0.3rem;
+        height: 0.3rem;
+        border-radius: 100%;
+        line-height: 0.3rem;
+        text-align: center;
+        border: 0.01rem solid #f00;
+        background: #fff;
+        margin-right: -0.4rem;
+      }
+      .iconfont {
+        font-size: 22px !important;
+        margin-bottom: 2px;
+      }
+      .tabbar-text {
+        font-size: 12px;
+      }
+    }
+  }
+}

@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import "static/font/iconfont.css";
+import "./App.scss";
+import BottomTabbar from "common/BottomTabbar";
+import Router from "routes/index";
+
+import localContext from "utils/localContext";
+import useLocalReducer from "utils/useLocalReducer";
 
 function App() {
+  const Context = localContext();
+  const [state, dispatch] = useLocalReducer();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Context.Provider value={{ ...state, dispatch }}>
+      <div className="App">
+        <Router isLogin={state.userInfo.loginStatus}>
+          <BottomTabbar />
+        </Router>
+      </div>
+    </Context.Provider>
   );
 }
 

@@ -1,0 +1,144 @@
+
+ 
+$header_h: 0.8rem;
+$imgsrc: '../../static/images'; //背景图片路径
+
+$pointer: 'cursor: pointer';
+
+.home{
+	width: 100%; background: #fff;  
+	:global{
+	
+		//幻灯片
+		.huandengpic{
+			width: 100%; max-width: 640px; 
+			overflow: hidden;  
+			height: 3.66rem;text-align: center; 
+			margin: 0 auto; background: #ccc;
+			font-size: 0.36rem; text-align: center;  
+			.am-wingblank.am-wingblank-lg{
+				margin: 0;
+			}
+		}
+		//精品区
+		.boutique{
+			width: 100%; max-width: 640px; 
+			height: 3.03rem; text-align: center;
+			background: #ccc; margin-bottom: 0.05rem;
+			font-size: 0.36rem;text-align: center;
+			img{
+				height: 100%;
+			}
+		}
+
+		.submenu{
+			width: 100%; max-width: 640px; 
+			.wrapper{
+				display: flex; flex-direction: row;
+				height: 100%; flex-wrap: wrap; padding: 0.05rem 0;
+				li{
+					display: flex; width: 20%; 
+					height: 1.5rem; justify-content: center; 
+					align-items: center; flex-direction: column;
+					.imgbox{
+						width: 0.8rem; text-align: center;
+						margin: 0 auto;
+						img{
+							width: 100%;
+						}
+					}
+					.title{
+						padding: 0.1rem 0; overflow: hidden; 
+						font-size: 0.28rem; text-align: center;
+						text-overflow: ellipsis; white-space: nowrap;
+						color: #666;
+					}
+				}
+			}
+		}
+
+		.scroll_news{
+			padding: 0.15rem 0.2rem; position: relative;
+			margin-bottom: 0.1rem;
+			.notice-logo{
+				position: absolute; left: 0.2rem; top: 0.25rem;
+				width: 1.5rem; height: 0.38rem;
+				background: url('#{$imgsrc}/notice.jpg') no-repeat;
+				background-size: cover;
+			}
+			.more{
+				border-left: 0.01rem solid #e1e1e1; padding: 0.05rem 0.1rem;
+				font-size: 0.28rem; 
+				position: absolute; top: 0.25rem; right: 0.2rem;
+			}
+			.news-wrapper{
+				height: 0.5rem; padding: 0 0.5rem 0 1.5rem;
+				.am-wingblank.am-wingblank-lg{
+					padding: 0px;
+				}
+				li{
+					padding: 0.15rem 0;
+				}
+				.text-font{
+					font-size: 0.28rem; white-space: nowrap;
+					overflow: hidden; text-overflow: ellipsis; 
+				}
+			}
+		}
+
+		//floor楼层
+		.floor{
+			.fls-tit{
+				height: 0.7rem; text-align: center;
+				background: #f6f6f6;
+				img{
+					width: 100%; height: 100%; display: block;
+				}
+			}
+			.floor-container{
+				width: 100%; overflow: hidden;
+				border-bottom: 0.01rem solid #f5f5f5;
+				display: flex; justify-content: flex-start;
+				flex-direction: row; flex-wrap: wrap;
+				.graphic-separation{
+					border-right: 0.01rem solid #f5f5f5; 
+					border-bottom: 0.01rem solid #f5f5f5; 
+					box-sizing: border-box;
+					background: #fff; height: 2.8rem; 
+					width: 50%; padding: 0.1rem 0;
+					.graphic-text{
+						padding: 0 0.15rem;
+						p{
+							line-height: 1.5;
+						}
+						.year-wrap{
+							margin-bottom: 0.05rem; display: flex; 
+							justify-content: flex-start; align-items: center;
+							overflow: hidden; 
+							span{
+								font-size: 0.34rem; color: #333; 
+								display: inline-block; margin-right: 0.1rem;
+								max-width: 100%; text-overflow: ellipsis;
+							}
+							img{
+								width: 0.6rem; height: 0.26rem; vertical-align: top;
+							}
+						}
+						.red{
+							font-size: 0.26rem; color: #FF5959;
+						}
+					}
+					.graphic-img{
+						height: 1.6rem; padding: 0 0.2rem;
+						img{
+							float: left; width: 1.35rem; height: 1.35rem;
+							margin: 0.15rem 0.15rem 0;
+						}
+					}
+				}
+			}
+		}
+
+	}
+}
+

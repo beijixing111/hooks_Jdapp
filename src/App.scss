@@ -1,0 +1,27 @@
+
+html{
+	height: 100vh;
+	overflow: hidden;
+}
+body{
+	height: 100vh;
+	overflow-x: hidden;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+#root{
+	min-height: 100%;
+}
+.App{
+	padding-bottom: 50px; 
+	max-width: 640px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+input,textarea{
+	-webkit-appearance: none; 
+	outline: none; box-shadow: none;
+	&::-webkit-input-placeholder {
+		color: #999;
+	}
+} 

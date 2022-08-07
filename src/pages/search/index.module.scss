@@ -1,0 +1,83 @@
+$header_h: 0.8rem;
+.search {
+  width: 100%;
+  overflow: hidden; 
+  :global{
+    .header{
+      position: fixed; top: 0; z-index: 99;
+      width: 100%; max-width: 640px; height: $header_h;  
+      background: #e43130; overflow: hidden;
+      box-sizing: border-box; 
+    }
+    .fenlei{
+      float: left; width: 0.8rem; height: $header_h;
+      text-align: center; line-height: $header_h;
+      a{
+        display: block; width: 100%; height: 100%;
+        line-height: $header_h; color: #fff; font-size: 0.32rem;
+      }
+      .icon-fanhui{
+        font-size: 0.5rem; color: #fff; vertical-align: top; 
+        position: relative; display: inline-block; 
+      }
+    }
+    .search-container{
+      position: absolute; top: 0; left: 0.86rem;
+      right: 0.86rem;  height: 100%; display: flex;
+      justify-content: center; align-items: center;
+      .search-box{
+        background: #fff; height: 0.56rem; border-radius: 0.28rem;
+        width: 100%; position: relative; overflow: hidden;
+        .jd-icon-logo{
+          position: absolute; left: 0.15rem; top: 0;
+          color: #f00; font-size: 0.3rem; 
+          display: flex; height: 100%; padding: 0 0.1rem; 
+          align-items: center; 
+          &:after{
+            content: ''; position: absolute;
+            right: -0.08rem; top: 0.16rem;
+            width: 0.01rem; height: 0.26rem; 
+            background: #ddd;
+          } 
+        }
+        .jd-icon-search{
+          float: left; width: 0.24rem; height: 0.24rem;
+          margin: 0.1rem 0 0 0.95rem; font-size: 0.38rem;
+          color: #ccc;  
+        }
+        .jd-header-input{ 
+          margin: 0 0.2rem 0 1.4rem; height: 100%;
+          input{
+            display: flex; width: 100%; padding: 0; font-size: 0.28rem;
+            border: 0; height: 100%; align-items: center; 
+            &::-webkit-input-placeholder {
+              font-size: 0.28rem; 
+            }
+          }
+        }
+      }
+    }
+    .login-btn{
+      float: right; width: 0.9rem; height: $header_h;
+      text-align: center; line-height: $header_h; 
+      .btn{
+        display: block; width: 100%; height: 100%;
+        font-size: 0.24rem; color: #fff; padding: 0;
+        outline: none; box-shadow: none; background: none;
+        border-radius: 0.1rem; border: none;
+      }
+    }
+
+    .res-warper{
+      padding-top: $header_h;
+      min-height: 3rem;
+      .res-list{
+        font-size: 0.28rem; text-align: center;
+        padding: 0.2rem;
+        p{
+          font-size: 0.26rem; color: #888;
+        }
+      }
+    }
+  }
+}

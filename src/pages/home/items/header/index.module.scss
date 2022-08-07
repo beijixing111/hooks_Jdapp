@@ -1,0 +1,117 @@
+$header_h: 0.8rem;
+$imgsrc: '../../../../static/images'; //背景图片路径
+
+.myheader{
+
+  :global{  
+    .header{
+      position: fixed; top: $header_h; z-index: 99;
+      width: 100%; max-width: 640px; height: $header_h;  
+      background: none; overflow: hidden;
+      box-sizing: border-box;
+      &.after{
+        background: #e43130;
+      }
+    }
+    .top-wrapper{
+			background: #333; 
+			position: fixed; top: 0; width: 100%;
+			z-index: 99; max-width: 640px;
+			height: $header_h;
+			.close{
+				margin-left: 2.5%; float: left; width: 16px;
+				position: relative; height: $header_h;
+				.close-img{
+					position: absolute;
+					left: 0;
+					top: 50%;
+					transform: translate(0, -50%);
+					height: 16px;
+					width: 16px; 
+					border-radius: 50%;
+					background: url('#{$imgsrc}/close.png') no-repeat;
+					background-size: cover;
+				} 
+			}
+			.logoimg{
+				width: 35px; line-height: $header_h; height: $header_h;
+				margin-left: 2.5%; margin-right: 2.5%;
+				vertical-align: middle; float: left;
+				position: relative;
+				img{ 
+					position: absolute;
+					width: 35px;
+					left: 0;
+					top: 50%;
+					transform: translate(0, -50%);
+				}
+			}
+			.download-text{
+				float: left; height: $header_h;
+				font-size: 14px;
+				display: flex; justify-content: center;
+				align-items: center; color: #fff;
+			}
+			.btn-open{
+				background: #cd2525; float: right; font-size: 16px;
+				height: $header_h; line-height: $header_h; cursor: pointer;
+				color: #fff; width: 28%; text-align: center;
+			}
+		}
+    .fenlei{
+      float: left; width: 0.8rem; height: $header_h;
+      text-align: center; line-height: $header_h;
+      a{
+        display: block; width: 100%; height: 100%;
+        line-height: $header_h; color: #fff; font-size: 0.32rem;
+      }
+      .icon-fanhui{
+        font-size: 0.5rem; color: #fff; vertical-align: top; 
+        position: relative; display: inline-block; 
+      }
+    }
+    .search-container{
+      position: absolute; top: 0; left: 0.86rem;
+      right: 0.86rem;  height: 100%; display: flex;
+      justify-content: center; align-items: center;
+      .search-box{
+        display: block;
+        background: #fff; height: 0.56rem; border-radius: 0.28rem;
+        width: 100%; position: relative; overflow: hidden;
+        .jd-icon-logo{
+          position: absolute; left: 0.15rem; top: 0;
+          color: #f00; font-size: 0.3rem; 
+          display: flex; height: 100%; padding: 0 0.1rem; 
+          align-items: center; 
+          &:after{
+            content: ''; position: absolute;
+            right: -0.08rem; top: 0.16rem;
+            width: 0.01rem; height: 0.26rem; 
+            background: #ddd;
+          } 
+        }
+        .jd-icon-search{
+          float: left; width: 0.24rem; height: 0.24rem;
+          margin: 0.1rem 0 0 0.95rem; font-size: 0.38rem;
+          color: #ccc;  
+        }
+        .jd-header{ 
+          margin: 0 0.2rem 0 1.4rem; height: 100%;
+          .placlholder{
+            display: flex; width: 100%; font-size: 0.26rem;
+            border: 0; height: 100%; align-items: center;  
+            color: #888;
+          }
+        }
+      }
+    }
+    .login-btn{
+      float: right; width: 0.9rem; height: $header_h;
+      text-align: center; line-height: $header_h;
+      a{
+        display: block; width: 100%; height: 100%;
+        font-size: 0.28rem; color: #fff; 
+      }
+    }
+  }
+}
