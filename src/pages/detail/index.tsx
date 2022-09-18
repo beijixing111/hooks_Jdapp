@@ -31,7 +31,8 @@ const Detail = () => {
 
   const handleSwitch = (i: number) => {
     setNavbarIndex(i);
-    let navbar = document.querySelector(".navbar") as HTMLElement;
+    let navbar = document.querySelector("#goodsDetail") as HTMLElement;
+    console.log(navbar);
     let navbarHei = navbar.offsetHeight;
     let scrollTop = document.getElementById(partsArr[i])!.offsetTop;
     let pageSrcoll = document.querySelector("body")!;
@@ -65,9 +66,11 @@ const Detail = () => {
 
   useEffect(() => {
     const scrollEl = document.querySelector("body")!;
+    scrollEl.style.scrollBehavior = "smooth";
     scrollEl.addEventListener("scroll", onScroll);
     return () => {
       scrollEl.removeEventListener("scroll", onScroll);
+      scrollEl.style.scrollBehavior = "";
     };
   });
 
